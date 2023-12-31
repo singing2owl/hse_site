@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block title %} Статистика {% endblock %} {% block content %}
+<table>
+    <tr>
+        <td>Количество ответов: </td>
+        <td>{{ all_info['total_count'] }}</td>
+    </tr>
+    <tr>
+        <td>Средний возраст опрошенных: </td>
+        <td>{{ all_info['age_mean'] }}</td>
+    </tr>
+    <tr>
+        <td>Минимальная длина короткого имени: </td>
+        <td>{{ all_info['min_name_len'] }}</td>
+    </tr>
+    <tr>
+        <td>Средняя длина короткого имени: </td>
+        <td>{{ all_info['mean_name_len'] }}</td>
+    </tr>
+    <tr>
+        <td>Варианты имени <b>Александр</b>: </td>
+        <td>{{ all_info['a_answers'] }}</td>
+    </tr>
+    <tr>
+        <td>Варианты имени <b>Владимир</b>: </td>
+        <td>{{ all_info['v_answers'] }}</td>
+    </tr>
+    <tr>
+        <td>Варианты имени <b>Дмитрий</b>: </td>
+        <td>{{ all_info['d_answers'] }}</td>
+    </tr>
+    <tr>
+        <td>Варианты имени <b>Наталия</b>: </td>
+        <td>{{ all_info['n_answers'] }}</td>
+    </tr>
+    <tr>
+        <td>Варианты имени <b>Софья</b>: </td>
+        <td>{{ all_info['s_answers'] }}</td>
+    </tr>
+    <tr>
+        <td>Варианты имени <b>Татьяна</b>: </td>
+        <td>{{ all_info['t_answers'] }}</td>
+    </tr>
+</table>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block title %} Опросник {% endblock %} {% block content %}
+<h1>Что в имени тебе моём?</h1>
+<form action="/questions" method='GET'>
+    <fieldset>
+        <legend><b>Это сайт с мини-опросом про разные короткие варианты имён!</b></legend>
+        <p>Чтобы пройти его, нужно дать согласие на обработку персональных данных</p>
+        Согласны ли Вы пройти опрос?<br>
+        <input type="radio" name="ask" value="yes" checked>Да<br>
+        <p><input type="submit" value="К опросу"></p>
+    </fieldset>
+</form>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% block title %} Опросник {% endblock %} {% block content %}
+
+<form class="container" action="/process">
+    <fieldset>
+        <legend><b>Анкета</b></legend>
+        <div class="row">
+            <div class="col-md-4">Возраст</div>
+            <div class="col-md-4"><input type="number" name="age"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">Гендер</div>
+            <select name="gender" class="col-md-4">
+                    <option value="male">м</option>
+                    <option value="female">ж</option>
+                    <option value="other">другой</option>
+            </select>
+        </div>
+    </fieldset>
+
+    <form action="/" method='GET'>
+        <fieldset>
+            <legend><b>Опрос</b></legend>
+            Владеете ли Вы русским как родным?<br>
+            <input type="radio" name="ask" value="yes">Да<br>
+            <input type="radio" name="ask" value="no">Нет<br>
+            <div class="row">
+                <div class="col-md-4">Сколько букв в самой короткой форме Вашего имени? (напишите числом)</div>
+                <div class="col-md-4"><input type="number" name="name_len"></div>
+            </div>
+            <br> Какая уменьшительная форма имени <b>Александр</b> Вам приходит в голову (первой)?<br> (введите одно имя)<br>
+            <input type="text" name="alexander" required pattern='[A-Za-zА-Яа-яЁё-]+'><br> Какая уменьшительная форма имени <b>Владимир</b> Вам приходит в голову (первой)?<br> (введите одно имя)<br>
+            <input type="text" name="vladimir" required pattern='[A-Za-zА-Яа-яЁё-]+'><br> Какая уменьшительная форма имени <b>Дмитрий</b> Вам приходит в голову (первой)?<br> (введите одно имя)<br>
+            <input type="text" name="dmitry" required pattern='[A-Za-zА-Яа-яЁё-]+'><br> Какая уменьшительная форма имени <b>Наталия</b> Вам приходит в голову (первой)?<br> (введите одно имя)<br>
+            <input type="text" name="natalia" required pattern='[A-Za-zА-Яа-яЁё-]+'><br> Какая уменьшительная форма имени <b>Софья</b> Вам приходит в голову (первой)?<br> (введите одно имя)<br>
+            <input type="text" name="sofia" required pattern='[A-Za-zА-Яа-яЁё-]+'><br> Какая уменьшительная форма имени <b>Татьяна</b> Вам приходит в голову (первой)?<br> (введите одно имя)<br>
+            <input type="text" name="tatiana" required pattern='[A-Za-zА-Яа-яЁё-]+'><br>
+            <p><input type="submit" value="Отправить"></p>
+        </fieldset>
+    </form>
+    <p><a href='/'>Вернуться на главную</a></p>
+    {% endblock %}
